@@ -15,10 +15,9 @@ class Storage {
   removeItem(item) {
     const checkIndexItem = this.#items.indexOf(item);
     if (checkIndexItem >= 0) {
-      const rezultItems = this.#items.filter(
+      this.#items = this.#items.filter(
         el => el.toLowerCase() !== item.toLowerCase(),
       );
-      return rezultItems;
     } else {
       return `the product ${item} is missing for removal`;
     }
